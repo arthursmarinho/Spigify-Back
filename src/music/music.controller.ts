@@ -5,7 +5,7 @@ import { MusicService } from './music.service';
 export class MusicController {
   constructor(private readonly musicService: MusicService) {}
 
-  @Get('album/:id')
+  @Get('album/:id/tracks')
   getAlbum(@Param('id') id: string) {
     return this.musicService.getAlbum(id);
   }
